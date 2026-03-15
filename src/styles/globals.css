@@ -10,6 +10,7 @@
 
 html {
   scroll-behavior: smooth;
+  scroll-padding-top: 90px;
   width: 100%;
   min-height: 100%;
 }
@@ -26,6 +27,12 @@ body {
   min-height: 100vh;
   width: 100%;
 }
+
+/* Ensure anchored sections remain visible below the sticky navbar */
+section {
+  scroll-margin-top: 90px;
+}
+
 
 .glass {
   @apply bg-slate-900/40 backdrop-blur-xl border border-slate-700/60 shadow-soft rounded-3xl;

@@ -1,6 +1,11 @@
 import { FiGithub, FiMail, FiMapPin, FiPhone } from "react-icons/fi";
 import { motion } from "framer-motion";
 
+const sectionVariants = {
+  initial: { opacity: 0, y: 40 },
+  animate: { opacity: 1, y: 0 },
+};
+
 const contactItems = [
   {
     label: "GitHub",
@@ -30,7 +35,14 @@ const contactItems = [
 
 function Contact() {
   return (
-    <div className="space-y-8">
+    <motion.div
+      className="space-y-8"
+      initial="initial"
+      whileInView="animate"
+      viewport={{ once: true, margin: "-120px" }}
+      variants={sectionVariants}
+      transition={{ duration: 0.6, ease: "easeOut" }}
+    >
       <div className="space-y-3">
         <p className="section-title">Contact</p>
         <h2 className="section-heading">Let&apos;s build something real.</h2>
@@ -78,7 +90,7 @@ function Contact() {
           );
         })}
       </div>
-    </div>
+    </motion.div>
   );
 }
 

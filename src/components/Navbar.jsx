@@ -12,22 +12,51 @@ const links = [
 
 function Navbar() {
   const [scrolled, setScrolled] = useState(false);
+  const [activeId, setActiveId] = useState("home");
 
   useEffect(() => {
     const onScroll = () => {
       setScrolled(window.scrollY > 10);
     };
-    window.addEventListener("scroll", onScroll);
-    return () => window.removeEventListener("scroll", onScroll);
+    window.addEventListener("scroll", onScroll, { passive: true });
+
+    const sectionIds = ["home", "about", "skills", "projects", "experience", "contact"];
+    const sections = sectionIds
+      .map((id) => document.getElementById(id))
+      .filter((el) => el != null);
+
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            const id = entry.target.id;
+            if (id) setActiveId(id);
+          }
+        });
+      },
+      {
+        root: null,
+        threshold: 0.35,
+      }
+    );
+
+    sections.forEach((section) => observer.observe(section));
+
+    return () => {
+      window.removeEventListener("scroll", onScroll);
+      observer.disconnect();
+    };
   }, []);
 
   return (
     <header
-      className={`fixed inset-x-0 top-0 z-30 transition-colors duration-300 ${
-        scrolled ? "bg-slate-950/85 backdrop-blur-xl border-b border-slate-800/80" : "bg-transparent backdrop-blur-md"
+      className={`fixed inset-x-0 top-0 z-30 border-b border-transparent transition-colors duration-300 ${
+        scrolled
+          ? "bg-[rgba(15,23,42,0.8)] backdrop-blur-[10px] border-slate-800/80"
+          : "bg-transparent backdrop-blur-none"
       }`}
     >
-      <nav className="max-w-6xl mx-auto flex items-center justify-between px-4 sm:px-6 lg:px-8 py-4">
+      <nav className="max-w-6xl xl:max-w-7xl 2xl:max-w-[80rem] mx-auto flex items-center justify-between px-4 sm:px-6 lg:px-8 py-4">
         <a href="#home" className="flex items-center gap-2 group">
           <div className="gradient-border">
             <div className="flex h-9 w-9 items-center justify-center rounded-full bg-slate-950 text-primary shadow-soft group-hover:scale-105 group-hover:rotate-3 transition-transform">
@@ -46,16 +75,24 @@ function Navbar() {
 
         <div className="flex items-center gap-6">
           <ul className="hidden md:flex items-center gap-2 text-xs font-medium tracking-[0.2em] uppercase text-slate-300">
-            {links.map((link) => (
-              <li key={link.href}>
-                <a
-                  href={link.href}
-                  className="px-3 py-2 rounded-full hover:bg-slate-800/70 hover:text-white transition-colors"
-                >
-                  {link.label}
-                </a>
-              </li>
-            ))}
+            {links.map((link) => {
+              const targetId = link.href.replace("#", "");
+              const isActive = activeId === targetId;
+              return (
+                <li key={link.href}>
+                  <a
+                    href={link.href}
+                    className={`px-3 py-2 rounded-full transition-colors ${
+                      isActive
+                        ? "text-primary font-semibold bg-slate-900/70"
+                        : "text-slate-300 hover:bg-slate-800/70 hover:text-white"
+                    }`}
+                  >
+                    {link.label}
+                  </a>
+                </li>
+              );
+            })}
           </ul>
 
           <a

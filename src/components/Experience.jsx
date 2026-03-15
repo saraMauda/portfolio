@@ -1,8 +1,20 @@
 import { motion } from "framer-motion";
 
+const sectionVariants = {
+  initial: { opacity: 0, y: 40 },
+  animate: { opacity: 1, y: 0 },
+};
+
 function Experience() {
   return (
-    <div className="space-y-8">
+    <motion.div
+      className="space-y-8"
+      initial="initial"
+      whileInView="animate"
+      viewport={{ once: true, margin: "-120px" }}
+      variants={sectionVariants}
+      transition={{ duration: 0.6, ease: "easeOut" }}
+    >
       <div className="space-y-3">
         <p className="section-title">Experience</p>
         <h2 className="section-heading">Microservices Career Platform.</h2>
@@ -67,7 +79,7 @@ function Experience() {
           </div>
         </div>
       </motion.div>
-    </div>
+    </motion.div>
   );
 }
 

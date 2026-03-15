@@ -1,6 +1,20 @@
+import { motion } from "framer-motion";
+
+const sectionVariants = {
+  initial: { opacity: 0, y: 40 },
+  animate: { opacity: 1, y: 0 },
+};
+
 function About() {
   return (
-    <div className="space-y-8">
+    <motion.div
+      className="space-y-8"
+      initial="initial"
+      whileInView="animate"
+      viewport={{ once: true, margin: "-120px" }}
+      variants={sectionVariants}
+      transition={{ duration: 0.6, ease: "easeOut" }}
+    >
       <div className="space-y-3">
         <p className="section-title">About</p>
         <h2 className="section-heading">Building reliable, scalable systems.</h2>
@@ -28,7 +42,7 @@ function About() {
           </div>
         ))}
       </div>
-    </div>
+    </motion.div>
   );
 }
 

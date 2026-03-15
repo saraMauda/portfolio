@@ -3,7 +3,7 @@ import { FiGithub } from "react-icons/fi";
 import { projects } from "../data/projects.js";
 
 const cardVariants = {
-  initial: { opacity: 0, y: 24 },
+  initial: { opacity: 0, y: 40 },
   animate: { opacity: 1, y: 0 },
 };
 
@@ -19,17 +19,17 @@ function Projects() {
         </p>
       </div>
 
-      <div className="grid gap-6 lg:grid-cols-3">
+      <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
         {projects.map((project, index) => (
           <motion.article
             key={project.title}
             variants={cardVariants}
             initial="initial"
             whileInView="animate"
-            viewport={{ once: true, margin: "-80px" }}
-            transition={{ duration: 0.5, delay: index * 0.06, ease: "easeOut" }}
-            whileHover={{ y: -6 }}
-            className="glass flex flex-col justify-between p-5 md:p-6"
+            viewport={{ once: true, margin: "-120px" }}
+            transition={{ duration: 0.6, delay: index * 0.06, ease: "easeOut" }}
+            whileHover={{ y: -8, scale: 1.02 }}
+            className="glass flex flex-col justify-between p-5 md:p-6 border border-slate-700/70 hover:border-primary/60 hover:shadow-[0_18px_45px_rgba(99,102,241,0.35)] transition-transform duration-300 ease-out"
           >
             <div className="space-y-3">
               <p className="text-[11px] uppercase tracking-[0.2em] text-primary/70">
@@ -44,7 +44,7 @@ function Projects() {
                 {project.technologies.map((tech) => (
                   <span
                     key={tech}
-                    className="badge-pill bg-slate-900/80 border-slate-700/70 text-[11px] text-slate-100"
+                    className="inline-flex items-center rounded-full bg-[rgba(99,102,241,0.15)] text-primary px-2.5 py-1 text-[12px] font-medium"
                   >
                     {tech}
                   </span>

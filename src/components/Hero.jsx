@@ -14,13 +14,13 @@ const floatingIcons = [
 
 function Hero() {
   return (
-    <section className="hero-gradient relative overflow-hidden rounded-3xl md:rounded-[2rem] border border-slate-800/70 shadow-soft">
+    <section className="relative overflow-hidden rounded-3xl md:rounded-[2rem] border border-slate-800/70 shadow-soft bg-[linear-gradient(135deg,#0f172a,#1e293b)]">
       <div className="absolute -top-40 -right-40 h-72 w-72 rounded-full bg-primary/25 blur-3xl" />
       <div className="absolute -bottom-40 -left-32 h-80 w-80 rounded-full bg-accent/25 blur-3xl" />
 
       <div className="relative grid gap-10 lg:gap-16 2xl:gap-20 md:grid-cols-[1.3fr_minmax(0,0.9fr)] items-center px-6 sm:px-8 md:px-10 lg:px-14 2xl:px-20 py-10 sm:py-14 lg:py-16 2xl:py-20 min-h-[70vh]">
         <motion.div
-          initial={{ opacity: 0, y: 30 }}
+          initial={{ opacity: 0, y: 40 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.7, ease: "easeOut" }}
           className="space-y-8"
@@ -34,9 +34,12 @@ function Hero() {
             <p className="text-sm font-semibold tracking-[0.35em] uppercase text-slate-400">
               Software Engineer · Full-Stack
             </p>
-            <h1 className="text-4xl sm:text-5xl lg:text-6xl 2xl:text-7xl font-semibold tracking-tight text-white">
-              Sara Mauda
-            </h1>
+            <div className="relative inline-block">
+              <div className="pointer-events-none absolute -inset-1 rounded-full bg-primary/40 blur-3xl opacity-60" />
+              <h1 className="relative text-4xl sm:text-5xl lg:text-6xl 2xl:text-7xl font-semibold tracking-tight text-white">
+                Sara Mauda
+              </h1>
+            </div>
             <p className="text-lg md:text-xl text-slate-300">
               Full-Stack Developer | Software Engineer
             </p>
