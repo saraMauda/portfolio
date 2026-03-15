@@ -10,6 +10,8 @@
 
 html {
   scroll-behavior: smooth;
+  width: 100%;
+  min-height: 100%;
 }
 
 body {
@@ -17,10 +19,12 @@ body {
   font-family: theme("fontFamily.sans");
   background: radial-gradient(circle at top left, #1e293b 0, #0f172a 45%, #020617 100%);
   color: #e5e7eb;
+  width: 100%;
 }
 
 #app {
   min-height: 100vh;
+  width: 100%;
 }
 
 .glass {
