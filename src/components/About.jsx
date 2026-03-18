@@ -19,11 +19,12 @@ function About() {
         <p className="section-title">About</p>
         <h2 className="section-heading">Building reliable, scalable systems.</h2>
         <p className="max-w-2xl text-sm md:text-base text-slate-300/90">
-          Software Engineering student specializing in full-stack development and scalable system design.
-          Experienced in building complete systems from architecture to deployment, including secure
-          authentication, role-based access control and automation frameworks. Passionate about algorithms,
-          clean architecture and solving real-world problems.
-        </p>
+  Software Engineering student specializing in full-stack development and scalable system design.
+  Experienced in building complete systems from architecture to deployment, including secure
+  authentication, role-based access control and automation frameworks. 
+  Proficient in AI technologies, with hands-on experience integrating intelligent systems into production environments.
+  Passionate about algorithms, clean architecture and solving real-world problems.
+</p>
       </div>
 
       <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
