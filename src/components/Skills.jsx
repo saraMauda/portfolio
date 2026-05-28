@@ -1,12 +1,21 @@
 import { motion } from "framer-motion";
 import { skills } from "../data/skills.js";
-import { HiOutlineCodeBracket, HiOutlineServer, HiOutlineWrenchScrewdriver } from "react-icons/hi2";
+import {
+  HiOutlineCloud,
+  HiOutlineCodeBracket,
+  HiOutlineCpuChip,
+  HiOutlineServer,
+  HiOutlineWrenchScrewdriver,
+} from "react-icons/hi2";
 import { PiStackThin } from "react-icons/pi";
 
 const iconForCategory = (category) => {
   if (category === "Languages") return HiOutlineCodeBracket;
+  if (category === "AI & Automation") return HiOutlineCpuChip;
+  if (category === "Backend & Architecture") return HiOutlineServer;
   if (category === "Frontend") return PiStackThin;
-  if (category === "Backend") return HiOutlineServer;
+  if (category === "Cloud & DevOps") return HiOutlineCloud;
+  if (category === "Testing & Automation") return HiOutlineWrenchScrewdriver;
   return HiOutlineWrenchScrewdriver;
 };
 
@@ -15,10 +24,11 @@ function Skills() {
     <div className="space-y-8">
       <div className="space-y-3">
         <p className="section-title">Skills</p>
-        <h2 className="section-heading">From problem to production.</h2>
+        <h2 className="section-heading">From automation to production.</h2>
         <p className="max-w-2xl text-sm md:text-base text-slate-300/90">
-          A balanced skill set across backend, frontend and DevOps — enabling ownership of systems from
-          architecture and implementation through testing and deployment.
+          A production-focused stack across AI systems, backend architecture, frontend delivery and
+          cloud operations — enabling ownership from LLM workflows and agents through deployment on
+          Docker and Azure.
         </p>
       </div>
 
@@ -56,8 +66,8 @@ function Skills() {
 
               {index === 0 && (
                 <p className="text-[11px] text-slate-400/90">
-                  Strong foundation in algorithmic thinking, data modelling and performance-aware
-                  implementation.
+                  Core languages for AI automation services, enterprise backends and data-driven
+                  production systems.
                 </p>
               )}
             </motion.div>

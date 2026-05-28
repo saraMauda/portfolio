@@ -1,19 +1,43 @@
 export const skills = [
   {
     category: "Languages",
-    items: ["Java", "C#", "JavaScript", "Python", "C", "SQL"],
+    items: ["Python", "Java", "JavaScript", "SQL", "C#"],
+  },
+  {
+    category: "AI & Automation",
+    items: [
+      "LLMs",
+      "AI Agents",
+      "Claude API",
+      "RAG Systems",
+      "Prompt Engineering",
+      "Workflow Automation",
+      "Monday.com Automations",
+      "n8n",
+      "Make",
+    ],
+  },
+  {
+    category: "Backend & Architecture",
+    items: [
+      "Spring Boot",
+      "Node.js",
+      "REST APIs",
+      "JWT",
+      "Microservices",
+      "Gateway Architecture",
+    ],
   },
   {
     category: "Frontend",
-    items: ["React", "Angular", "HTML", "CSS"],
+    items: ["React", "Angular"],
   },
   {
-    category: "Backend",
-    items: ["Spring Boot", "Node.js", "REST APIs", "JWT Authentication"],
+    category: "Cloud & DevOps",
+    items: ["Docker", "Azure", "Git"],
   },
   {
-    category: "DevOps & Tools",
-    items: ["Docker", "Git", "Postman"],
+    category: "Testing & Automation",
+    items: ["Selenium", "MSTest", "API Integrations"],
   },
 ];
-

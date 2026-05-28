@@ -5,6 +5,25 @@ const sectionVariants = {
   animate: { opacity: 1, y: 0 },
 };
 
+const responsibilities = [
+  "Developed AI-powered automation systems using Python and Claude API for intelligent resume processing and candidate analysis.",
+  "Built AI agents that extract structured data from resumes and synchronize insights into Monday.com workflows.",
+  "Designed intelligent automation pipelines for recruitment and candidate management processes.",
+  "Developed autonomous Monday.com AI agents with advanced workflow capabilities, smart data extraction and system-wide automation.",
+  "Built AI-driven candidate matching workflows for job-position alignment and recruitment optimization.",
+  "Integrated LLM-based reasoning systems into production workflows.",
+  "Worked with API integrations, automation platforms and scalable backend services.",
+];
+
+const technologies = [
+  "Python",
+  "Claude API",
+  "Monday.com",
+  "LLMs",
+  "REST APIs",
+  "Automation Pipelines",
+];
+
 function Experience() {
   return (
     <motion.div
@@ -17,10 +36,11 @@ function Experience() {
     >
       <div className="space-y-3">
         <p className="section-title">Experience</p>
-        <h2 className="section-heading">Microservices Career Platform.</h2>
+        <h2 className="section-heading">Building AI systems in production.</h2>
         <p className="max-w-2xl text-sm md:text-base text-slate-300/90">
-          Worked on the infrastructure layer of a microservices-based career platform, focusing on
-          API gateway, routing, authentication and shared UI architecture.
+          Professional experience delivering intelligent automation, LLM integrations and
+          recruitment workflows on production platforms — from AI agents to scalable
+          backend services.
         </p>
       </div>
 
@@ -31,32 +51,35 @@ function Experience() {
         <div className="space-y-3 md:max-w-xl">
           <div>
             <p className="text-xs font-semibold tracking-[0.24em] uppercase text-slate-400">
+              Company
+            </p>
+            <p className="mt-1 text-base font-semibold text-white">BeyondCode</p>
+          </div>
+
+          <div>
+            <p className="text-xs font-semibold tracking-[0.24em] uppercase text-slate-400">
               Role
             </p>
             <p className="mt-1 text-base font-semibold text-white">
-              Gateway & Infrastructure Developer
+              AI Automation Engineer
             </p>
           </div>
 
           <div>
             <p className="text-xs font-semibold tracking-[0.24em] uppercase text-slate-400">
-              Description
+              Dates
             </p>
-            <p className="mt-2 text-sm text-slate-300/90">
-              Worked on infrastructure layer of a microservices career platform.
-            </p>
+            <p className="mt-1 text-sm text-slate-300/90">2026 – Present</p>
           </div>
 
           <div>
             <p className="text-xs font-semibold tracking-[0.24em] uppercase text-slate-400">
               Responsibilities
             </p>
-            <ul className="mt-2 space-y-1.5 text-sm text-slate-300/90">
-              <li>Implemented API Gateway using Ocelot.</li>
-              <li>Configured routing between microservices.</li>
-              <li>Built React client infrastructure.</li>
-              <li>Integrated automatic JWT token handling.</li>
-              <li>Designed shared UI architecture.</li>
+            <ul className="mt-2 space-y-1.5 text-sm text-slate-300/90 list-disc pl-5">
+              {responsibilities.map((item) => (
+                <li key={item}>{item}</li>
+              ))}
             </ul>
           </div>
         </div>
@@ -67,7 +90,7 @@ function Experience() {
               Technologies
             </p>
             <div className="mt-2 flex flex-wrap gap-2">
-              {["C#", ".NET", "Ocelot", "React", "JWT", "Microservices"].map((tech) => (
+              {technologies.map((tech) => (
                 <span
                   key={tech}
                   className="badge-pill bg-slate-900/80 border-slate-700/70 text-[11px] text-slate-100"
@@ -84,4 +107,3 @@ function Experience() {
 }
 
 export default Experience;
-

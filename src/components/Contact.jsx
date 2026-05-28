@@ -47,8 +47,9 @@ function Contact() {
         <p className="section-title">Contact</p>
         <h2 className="section-heading">Let&apos;s build something real.</h2>
         <p className="max-w-2xl text-sm md:text-base text-slate-300/90">
-          Whether it&apos;s a production system, a proof-of-concept or a complex technical challenge,
-          I&apos;m always interested in meaningful work with real impact.
+          Open to roles and collaborations involving AI automation, intelligent agents, LLM systems
+          and production full-stack architecture. Let&apos;s discuss building scalable systems with
+          real impact.
         </p>
       </div>
 

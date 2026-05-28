@@ -12,10 +12,10 @@ function Projects() {
     <div className="space-y-8">
       <div className="space-y-3">
         <p className="section-title">Projects</p>
-        <h2 className="section-heading">Selected engineering work.</h2>
+        <h2 className="section-heading">Production systems & scalable architecture.</h2>
         <p className="max-w-2xl text-sm md:text-base text-slate-300/90">
-          A snapshot of systems spanning full-stack web applications, automation frameworks and
-          algorithm-heavy game logic.
+          Enterprise-grade platforms spanning microservices backends, distributed services, cloud
+          deployment and full-stack delivery — built for real-world scale and operational reliability.
         </p>
       </div>
 
@@ -55,7 +55,7 @@ function Projects() {
             <div className="mt-5 flex items-center justify-between">
               <div className="flex items-center gap-2 text-[11px] text-slate-400">
                 <span className="h-1.5 w-1.5 rounded-full bg-emerald-400 shadow-[0_0_12px_rgba(52,211,153,0.9)]" />
-                <span>Production-ready patterns & practices</span>
+                <span>Production systems & architecture</span>
               </div>
 
               <motion.a

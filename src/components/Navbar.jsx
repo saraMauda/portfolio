@@ -68,7 +68,7 @@ function Navbar() {
               Sara Mauda
             </span>
             <span className="text-[11px] uppercase tracking-[0.18em] text-slate-400">
-              Software Engineer
+              AI Automation Engineer
             </span>
           </div>
         </a>

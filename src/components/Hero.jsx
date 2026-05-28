@@ -32,7 +32,7 @@ function Hero() {
 
           <div className="space-y-3">
             <p className="text-sm font-semibold tracking-[0.35em] uppercase text-slate-400">
-              Software Engineer · Full-Stack
+              AI Automation · AI Agents · Full-Stack
             </p>
             <div className="relative inline-block">
               <div className="pointer-events-none absolute -inset-1 rounded-full bg-primary/40 blur-3xl opacity-60" />
@@ -41,13 +41,15 @@ function Hero() {
               </h1>
             </div>
             <p className="text-lg md:text-xl text-slate-300">
-              Full-Stack Developer | Software Engineer
+              AI Automation Engineer | AI Agents Developer | Full-Stack Engineer
             </p>
           </div>
 
           <p className="max-w-xl text-sm md:text-base text-slate-300/90">
-            &quot;I build scalable systems, modern web applications and practical
-            real-world software solutions.&quot;
+            AI Automation Engineer specializing in AI agents, LLM-powered workflows,
+            automation systems and scalable full-stack architectures. Experienced in
+            building intelligent recruitment workflows, cloud-based systems and
+            production-ready applications using Python, Spring Boot, Docker and Azure.
           </p>
 
           <div className="flex flex-wrap items-center gap-4">
@@ -62,23 +64,31 @@ function Hero() {
             <motion.a
               whileHover={{ y: -2 }}
               whileTap={{ scale: 0.98 }}
+              href="#contact"
+              className="inline-flex items-center justify-center rounded-full border border-slate-700 bg-slate-900/60 px-5 py-2.5 text-sm font-medium text-slate-100 hover:border-primary/70 hover:text-primary hover:bg-slate-900/90 transition-colors"
+            >
+              Contact Me
+            </motion.a>
+            <motion.a
+              whileHover={{ y: -2 }}
+              whileTap={{ scale: 0.98 }}
               href={cvPdf}
               download="Sara-Mauda-CV.pdf"
               className="inline-flex items-center justify-center rounded-full border border-slate-700 bg-slate-900/60 px-5 py-2.5 text-sm font-medium text-slate-100 hover:border-primary/70 hover:text-primary hover:bg-slate-900/90 transition-colors"
             >
-              Download CV
+              Resume
             </motion.a>
           </div>
 
           <div className="flex flex-wrap gap-3 text-xs text-slate-300/90">
             <span className="badge-pill border-primary/50 bg-primary/20 text-primary-50">
-              Scalable backend & distributed systems
+              LLM workflows & AI agents
             </span>
             <span className="badge-pill border-emerald-500/50 bg-emerald-500/10 text-emerald-50">
-              End-to-end product delivery
+              Intelligent automation pipelines
             </span>
             <span className="badge-pill border-slate-600/70 bg-slate-900/70 text-slate-200">
-              Clean architecture & testing
+              Cloud & microservices architecture
             </span>
           </div>
         </motion.div>
@@ -102,11 +112,11 @@ function Hero() {
 
               <div className="relative w-full space-y-3 text-center">
                 <p className="text-xs uppercase tracking-[0.28em] text-slate-400">
-                  Full-Stack Engineering
+                  AI & Automation Engineering
                 </p>
                 <p className="text-sm text-slate-300/90">
-                  Building secure, production-ready systems from API gateway to
-                  pixel-perfect UI.
+                  Production AI systems, intelligent workflows and scalable backends
+                  from automation pipelines to secure APIs.
                 </p>
               </div>
 
@@ -115,13 +125,13 @@ function Hero() {
                   <p className="text-[10px] uppercase tracking-[0.18em] text-slate-500">
                     Focus
                   </p>
-                  <p>System design, APIs, automation</p>
+                  <p>AI agents, LLMs, automation</p>
                 </div>
                 <div className="space-y-1.5 text-right">
                   <p className="text-[10px] uppercase tracking-[0.18em] text-slate-500">
                     Stack
                   </p>
-                  <p>Java · C# · React · Angular</p>
+                  <p>Python · Java · React · Docker</p>
                 </div>
               </div>
             </div>
@@ -152,4 +162,3 @@ function Hero() {
 }
 
 export default Hero;
-
