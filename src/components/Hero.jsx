@@ -1,4 +1,4 @@
-import { motion } from "framer-motion";
+﻿import { motion } from "framer-motion";
 import { SiReact, SiSpringboot, SiAngular, SiDocker } from "react-icons/si";
 import { FaJava, FaNodeJs } from "react-icons/fa6";
 import cvPdf from "../assets/cv sara mauda.pdf";
@@ -40,9 +40,6 @@ function Hero() {
                 Sara Mauda
               </h1>
             </div>
-            <p className="text-lg md:text-xl text-slate-300">
-              AI Automation Engineer | AI Agents Developer | Full-Stack Engineer
-            </p>
           </div>
 
           <p className="max-w-xl text-sm md:text-base text-slate-300/90">
@@ -56,16 +53,8 @@ function Hero() {
             <motion.a
               whileHover={{ y: -2, scale: 1.02 }}
               whileTap={{ scale: 0.98 }}
-              href="#projects"
-              className="primary-gradient inline-flex items-center justify-center rounded-full px-6 py-2.5 text-sm font-medium text-white shadow-soft shadow-indigo-900/70"
-            >
-              View Projects
-            </motion.a>
-            <motion.a
-              whileHover={{ y: -2 }}
-              whileTap={{ scale: 0.98 }}
               href="#contact"
-              className="inline-flex items-center justify-center rounded-full border border-slate-700 bg-slate-900/60 px-5 py-2.5 text-sm font-medium text-slate-100 hover:border-primary/70 hover:text-primary hover:bg-slate-900/90 transition-colors"
+              className="primary-gradient inline-flex items-center justify-center rounded-full px-6 py-2.5 text-sm font-medium text-white shadow-soft shadow-indigo-900/70"
             >
               Contact Me
             </motion.a>
